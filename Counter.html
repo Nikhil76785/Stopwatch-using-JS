@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <p id="num">0</p>
+    <button id="inc">Increase</button>
+    <button id="dec">Decrease</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        window.onload = function () {
+            var value = document.getElementById("num");
+            var binc = document.getElementById("inc");
+            var bdec = document.getElementById("dec");
+            var reset = document.getElementById("reset");
+
+            binc.onclick = function () {
+                value.innerText = parseInt(value.innerText) + 1;
+            }
+
+            bdec.onclick = function () {
+                value.innerText = (value.innerText) - 1;
+            }
+
+            reset.onclick = function () {
+                value.innerText = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
